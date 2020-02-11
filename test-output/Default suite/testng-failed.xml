@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <listeners>
+    <listener class-name="ListenersPackage.TestsListener"/>
+    <listener class-name="ListenersPackage.TransformListener"/>
+    <listener class-name="utilities.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="ChromeOrderTests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://sunten.stage.helioscript.com"/>
+    <classes>
+      <class name="tests.Orders">
+        <methods>
+          <include name="tearDown"/>
+          <include name="assert_LateOrder"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.Orders -->
+    </classes>
+  </test> <!-- ChromeOrderTests(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
