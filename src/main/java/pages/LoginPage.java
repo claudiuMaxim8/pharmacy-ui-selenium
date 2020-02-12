@@ -63,6 +63,11 @@ public class LoginPage extends BasePage {
 
 	    //Methods - page navigation functions
 	    public PractitionerHomePage login(String username, String password) {
+	    	try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 	    	getUsername().sendKeys(username);
 	        getPassword().sendKeys(password);
 	        getLoginBtn().click();
