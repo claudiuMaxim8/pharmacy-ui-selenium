@@ -85,6 +85,11 @@ public class LoginPage extends BasePage {
 	    }
 	    
 	    public void assert_wrongUser_errorMessage(String expected) {
+	    	try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 	    	Assert.assertEquals(getCredentialError().getText(), expected);
 	    }
     

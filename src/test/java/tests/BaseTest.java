@@ -70,7 +70,7 @@ public class BaseTest {
 					+ "application/x-excel," + "application/vnd.ms-excel,image/png,image/jpeg,text/html,text/plain,"
 					+ "application/msword," + "application/xml," + "application/vnd.microsoft.portable-executable");
 			FirefoxOptions option = new FirefoxOptions();
-			//option.addArguments("--headless");
+			option.addArguments("--headless");
 			option.setProfile(profile);
 
 			driver = new FirefoxDriver(option);

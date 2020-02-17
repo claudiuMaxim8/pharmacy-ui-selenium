@@ -28,7 +28,7 @@ public class SmokeTests extends BaseTest {
 		page.getInstance(CommissionsPage.class).assert_Commission(Variables.unEscapedHTML);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true, priority = 1)
 	public void adjustAdd_inventory() throws InterruptedException {
 
 		page.getInstance(LoginPage.class).login(Variables.admin, Variables.actualPass);
@@ -40,7 +40,7 @@ public class SmokeTests extends BaseTest {
 		page.getInstance(InventoryPages.ProductCatalog.class).assertAdjustment(Variables.succesfulAdjustment);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true, priority = 1)
 	public void adjustRemove_inventory() throws InterruptedException {
 
 		page.getInstance(LoginPage.class).login(Variables.admin, Variables.actualPass);
@@ -50,9 +50,9 @@ public class SmokeTests extends BaseTest {
 		page.getInstance(InventoryPages.ProductCatalog.class).selectItem();
 		page.getInstance(InventoryPages.ProductCatalog.class).quantityRemoval(Variables.lotQuantity);
 		page.getInstance(InventoryPages.ProductCatalog.class).assertAdjustment(Variables.succesfulAdjustment);
-	}// assert_ImportChineseNames
+	}
 
-	@Test(enabled = true)
+	@Test(enabled = true, priority = 1)
 	public void receive_inventory() throws InterruptedException {
 
 		page.getInstance(LoginPage.class).login(Variables.admin, Variables.actualPass);
@@ -65,7 +65,7 @@ public class SmokeTests extends BaseTest {
 		page.getInstance(InventoryPages.ProductCatalog.class).assertAdjustment(Variables.succesfulReceival);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true, priority = 1)
 	public void add_new_coupon() throws InterruptedException {
 
 		page.getInstance(LoginPage.class).login(Variables.admin, Variables.actualPass);
@@ -84,7 +84,7 @@ public class SmokeTests extends BaseTest {
 		page.getInstance(InventoryPages.MediumManagement.class).assertMedium(Variables.mediumMessage);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true, priority = 1)
 	public void invalidCredentials() throws InterruptedException {
 		page.getInstance(LoginPage.class).login(Variables.invalidUser, Variables.invalidPass);
 		page.getInstance(LoginPage.class).assert_wrongUser_errorMessage(Variables.loginEM);
@@ -109,7 +109,7 @@ public class SmokeTests extends BaseTest {
 		// Assert.assertEquals(actualEmpNameById, expectedEmpName);
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true, priority = 1)
 	public void shipping_method() {
 
 		page.getInstance(LoginPage.class).login(Variables.admin, Variables.actualPass);

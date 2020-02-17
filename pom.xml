@@ -9,20 +9,45 @@
 	<packaging>jar</packaging>
 
 	<name>helio</name>
-	<url>http://maven.apache.org</url>
+	<url>https://maven.apache.org</url>
 
 	<properties>
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<dependencies>
 		<!-- Selenium + JAVA + DriverManager + -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.14.0</version>
+			<version>3.141.59</version>
 		</dependency>
 
 		<dependency>
@@ -52,7 +77,7 @@
 			<version>6.1.0.jre8</version>
 		</dependency>
 
-		
+
 
 		<!-- Apache POI -->
 		<dependency>
@@ -87,7 +112,7 @@
 		</dependency>
 
 		<!-- Commons -->
-		
+
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
@@ -110,7 +135,7 @@
 			<artifactId>extentreports</artifactId>
 			<version>2.41.2</version>
 		</dependency>
-		
+
 		<!-- Jira Client -->
 		<dependency>
 			<groupId>net.rcarz</groupId>
@@ -118,13 +143,14 @@
 			<version>0.5</version>
 		</dependency>
 
+
 	</dependencies>
 
 
 
 	<!-- Builds -->
 	<build>
-		
+
 		<resources><!-- HAVE -->
 			<resource>
 				<directory>src/main/resources</directory>
@@ -138,14 +164,14 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.0.2</version>
+				<version>3.1.0</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 
 
-			
+
 			<plugin><!-- HAVE -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -158,8 +184,9 @@
 				</configuration>
 			</plugin>
 
-			 <!-- HAVE -->
+			<!-- HAVE -->
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
 				<configuration>
@@ -167,25 +194,12 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			<!-- <plugin>HAVE but with version
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin> -->
-
-
-			
-
 
 			<!-- I need this plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>3.0.1</version>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -197,6 +211,8 @@
 			</plugin>
 
 		</plugins>
+
+
 
 
 	</build>

@@ -19,8 +19,8 @@
 			<class name="tests.Orders">
 				<methods>
 					<include name="assert_LateOrder" />
-					<include name="shipOrder" />
-					<include name="placeOrder" />
+					<!-- <include name="shipOrder" />
+					<include name="placeOrder" /> -->
 				</methods>
 			</class>
 		</classes>

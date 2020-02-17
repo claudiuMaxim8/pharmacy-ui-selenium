@@ -23,14 +23,14 @@
 
 
 	<!-- Firefox -->
-	<test name="Helioscript-SmokeTests(FIREFOX)">
+	<!-- <test name="Helioscript-SmokeTests(FIREFOX)">
 		<parameter name="browser" value="firefox" />
 		<parameter name="url" value="http://sunten.stage.helioscript.com" />
 
 		<classes>
 			<class name="tests.SmokeTests" />
 		</classes>
-	</test>
+	</test> -->
 
 	
 </suite>
