@@ -12,7 +12,6 @@
 	<url>https://maven.apache.org</url>
 
 	<properties>
-
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -28,7 +27,7 @@
 			<url>https://repo.maven.apache.org/maven2</url>
 		</repository>
 	</repositories>
-	<!-- <pluginRepositories>
+	<pluginRepositories>
 		<pluginRepository>
 			<releases>
 				<updatePolicy>never</updatePolicy>
@@ -40,7 +39,7 @@
 			<name>Central Repository</name>
 			<url>https://repo.maven.apache.org/maven2</url>
 		</pluginRepository>
-	</pluginRepositories> -->
+	</pluginRepositories>
 
 	<dependencies>
 		<!-- Selenium + JAVA + DriverManager + -->

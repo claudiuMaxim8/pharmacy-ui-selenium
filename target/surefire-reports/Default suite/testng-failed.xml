@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Default suite]">
+  <listeners>
+    <listener class-name="ListenersPackage.TestsListener"/>
+    <listener class-name="ListenersPackage.TransformListener"/>
+    <listener class-name="utilities.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Helioscript-SmokeTests(CHROME)(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://sunten.stage.helioscript.com"/>
+    <classes>
+      <class name="tests.SmokeTests">
+        <methods>
+          <include name="adjustAdd_inventory"/>
+          <include name="medium_Management"/>
+          <include name="shipping_method"/>
+          <include name="send_CSRInvitation"/>
+          <include name="tearDown"/>
+          <include name="addNewPatient"/>
+          <include name="send_CompounderInvitation"/>
+          <include name="send_AdminInvitation"/>
+          <include name="adjustRemove_inventory"/>
+          <include name="setUp"/>
+          <include name="receive_inventory"/>
+        </methods>
+      </class> <!-- tests.SmokeTests -->
+    </classes>
+  </test> <!-- Helioscript-SmokeTests(CHROME)(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
