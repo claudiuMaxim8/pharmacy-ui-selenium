@@ -12,10 +12,10 @@ import org.apache.commons.text.StringEscapeUtils;
 public class Variables {
 
 	// URLs
-	public static String development = "";
+	public static String development = "http://sunten.dev.helioscript.com/account/login";
 	public static String staging = "http://sunten.stage.helioscript.com/account/login";
-	public static String uat = "";
-	public static String live = "";
+	public static String uat = "http://sunten.uat.helioscript.com/account/login";
+	public static String live = "";//
 
 	
 	// Accounts and passwords

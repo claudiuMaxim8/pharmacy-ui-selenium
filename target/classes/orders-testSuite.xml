@@ -28,7 +28,7 @@
 
 
 	<!-- Firefox Orders -->
-<!-- 	<test name="FirefoxOrderTests">
+	<test name="FirefoxOrderTests">
 		<parameter name="browser" value="firefox" />
 		<parameter name="url" value="http://sunten.stage.helioscript.com" />
 
@@ -41,7 +41,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test> -->
-
+		
+	</test>
 
 </suite>

@@ -53,7 +53,7 @@ public class BaseTest {
 			options.setExperimentalOption("prefs", prefs);
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
 			//options.addArguments("enable-automation");
-			options.addArguments("--headless");
+			//options.addArguments("--headless");
 
 			driver = new ChromeDriver(options);
 

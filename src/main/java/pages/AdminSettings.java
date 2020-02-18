@@ -79,7 +79,7 @@ public class AdminSettings extends BasePage {
         private By firstName = By.xpath("//div[@id='#invitationPopup']/div[@class='row']/form/ufc-form-render/div[1]/div[@class='c-user-box']/div[@class='user-box__item']/dx-text-box//input[@role='textbox']");
         private By lastName = By.xpath("//div[@id='#invitationPopup']/div[@class='row']/form/ufc-form-render/div[2]/div[@class='c-user-box']/div[@class='user-box__item']/dx-text-box//input[@role='textbox']");
         private By email = By.xpath("//div[@id='#invitationPopup']/div[@class='row']/form/ufc-form-render/div[3]/div[@class='c-user-box']/div[@class='user-box__item']/dx-text-box//input[@role='textbox']");
-        private By roleList = By.xpath("//body/div[2]/div/div[@class='dx-popup-content']/div[@role='listbox']//div[@class='dx-scrollview-content']");
+        //private By roleList = By.xpath("//body/div[2]/div/div[@class='dx-popup-content']/div[@role='listbox']//div[@class='dx-scrollview-content']");
         private By send = By.cssSelector(".dx-button-text");
         //LIST = roleList 
         //Page Locators - Role

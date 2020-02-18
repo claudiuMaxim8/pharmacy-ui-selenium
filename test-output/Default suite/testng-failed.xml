@@ -6,47 +6,17 @@
     <listener class-name="ListenersPackage.TransformListener"/>
     <listener class-name="utilities.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="Helioscript-SmokeTests(CHROME)(failed)">
+  <test thread-count="5" name="ChromeOrderTests(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://sunten.stage.helioscript.com"/>
     <classes>
-      <class name="tests.SmokeTests">
+      <class name="tests.Orders">
         <methods>
-          <include name="add_new_coupon"/>
-          <include name="adjustAdd_inventory"/>
-          <include name="medium_Management"/>
-          <include name="shipping_method"/>
-          <include name="send_CSRInvitation"/>
           <include name="tearDown"/>
-          <include name="addNewPatient"/>
-          <include name="send_CompounderInvitation"/>
-          <include name="send_AdminInvitation"/>
-          <include name="adjustRemove_inventory"/>
+          <include name="assert_LateOrder"/>
           <include name="setUp"/>
-          <include name="receive_inventory"/>
         </methods>
-      </class> <!-- tests.SmokeTests -->
+      </class> <!-- tests.Orders -->
     </classes>
-  </test> <!-- Helioscript-SmokeTests(CHROME)(failed) -->
-  <test thread-count="5" name="Helioscript-SmokeTests(FIREFOX)(failed)">
-    <parameter name="browser" value="firefox"/>
-    <parameter name="url" value="http://sunten.stage.helioscript.com"/>
-    <classes>
-      <class name="tests.SmokeTests">
-        <methods>
-          <include name="adjustAdd_inventory"/>
-          <include name="medium_Management"/>
-          <include name="shipping_method"/>
-          <include name="send_CSRInvitation"/>
-          <include name="tearDown"/>
-          <include name="addNewPatient"/>
-          <include name="send_CompounderInvitation"/>
-          <include name="send_AdminInvitation"/>
-          <include name="adjustRemove_inventory"/>
-          <include name="setUp"/>
-          <include name="receive_inventory"/>
-        </methods>
-      </class> <!-- tests.SmokeTests -->
-    </classes>
-  </test> <!-- Helioscript-SmokeTests(FIREFOX)(failed) -->
+  </test> <!-- ChromeOrderTests(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -104,6 +104,7 @@ public class SmokeTests extends BaseTest {
 		// String expectedEmpName = "Melissa";
 		// Getting employee name by Id
 		String actualEmpNameById = DatabaseConnection.executeSQLQuery("QA", sqlQuery, operationTypeEnum.Update);
+		System.out.println("Query is: " + actualEmpNameById);
 		// System.out.println("Employee name retrieved from database :" +
 		// actualEmpNameById);
 		// Assert.assertEquals(actualEmpNameById, expectedEmpName);

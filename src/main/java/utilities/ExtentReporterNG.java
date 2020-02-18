@@ -1,7 +1,6 @@
 package utilities;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -24,6 +23,7 @@ import tests.BaseTest;
 public class ExtentReporterNG implements IReporter {
 	private ExtentReports extent;
 	public BaseTest baseTest;
+
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		extent = new ExtentReports(outputDirectory + File.separator + "HelioscriptReport.html", true);
 
@@ -61,12 +61,6 @@ public class ExtentReporterNG implements IReporter {
 				} else {
 					test.log(status, "Test " + status.toString().toLowerCase() + "ed");
 				}
-				
-				
-				
-				
-				
-				
 
 				extent.endTest(test);
 			}

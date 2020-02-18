@@ -55,5 +55,17 @@ public class Orders extends BaseTest {
 		page.getInstance(DispensaryPage.class).enter_NotificationsBar();
 		page.getInstance(DispensaryPage.class).assertLateOrder("Late Order");
 	}
+	
+	@Test(enabled = true)
+	public void orderHour() {
+		String sqlQuery = "UPDATE [pharmacy].[dispensing].[Orders] SET PlacedOn = DATEADD(hh, - 1, (CURRENT_TIMESTAMP)) WHERE PlacedOn = (SELECT TOP 1 PlacedOn FROM [pharmacy].[dispensing].[Orders] ORDER BY Id DESC)";
+		// String expectedEmpName = "Melissa";
+		// Getting employee name by Id
+		String actualEmpNameById = DatabaseConnection.executeSQLQuery("QA", sqlQuery, operationTypeEnum.Update);
+		System.out.println("Query is :"  + actualEmpNameById);
+		// System.out.println("Employee name retrieved from database :" +
+		// actualEmpNameById);
+		// Assert.assertEquals(actualEmpNameById, expectedEmpName);
+	}
 
 }

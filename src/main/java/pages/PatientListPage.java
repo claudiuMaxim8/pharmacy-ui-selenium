@@ -228,7 +228,6 @@ public class PatientListPage extends BasePage {
         String orderNumber = words[1].replace("#", "");
         System.out.println("This is the extracted word: " + orderNumber);
         return orderNumber.toString();
-        
     }
     
     public void assertOrder(String expected) {

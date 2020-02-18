@@ -42,6 +42,7 @@
 	</pluginRepositories>
 
 	<dependencies>
+	
 		<!-- Selenium + JAVA + DriverManager + -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
