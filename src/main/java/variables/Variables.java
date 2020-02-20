@@ -11,6 +11,7 @@ import org.apache.commons.text.StringEscapeUtils;
 
 public class Variables {
 
+	
 	// URLs
 	public static String development = "http://sunten.dev.helioscript.com/account/login";
 	public static String staging = "http://sunten.stage.helioscript.com/account/login";
@@ -45,6 +46,8 @@ public class Variables {
 	public static String chineseNamesMessage = "You have successfully imported the names for 2 products.";
 	public static String settingsMessage = "Settings saved successfully";
 	public static String practitionerProfileMessage = "Your data has been successfully saved.";
+	
+	
 	// Add Patient Info
 	public static String firstName = UUID.randomUUID().toString();
 	public static String lastName = UUID.randomUUID().toString();
@@ -96,7 +99,7 @@ public class Variables {
 	public static String lotNumberRecallReport = "Lot_Number_Recall_Report.csv";
 
 	
-	// Downloaded files location - in project location
+	// Downloaded files location - inProject location
 	public static String downloadFilepathOpera = System.getProperty("user.dir") + File.separator + "downloadFiles" + File.separator + "opera";
 	public static String downloadFilepathChrome = System.getProperty("user.dir") + File.separator + "downloadFiles" + File.separator + "chrome";
 	public static String downloadFilepathFirefox = System.getProperty("user.dir") + File.separator + "downloadFiles" + File.separator + "firefox";

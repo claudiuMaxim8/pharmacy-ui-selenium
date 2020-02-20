@@ -1,10 +1,10 @@
 package ListenersPackage;
 
-import tests.BaseTest;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
+import tests.BaseTest;
 
 public class TestsListener extends BaseTest implements ITestListener {
 
