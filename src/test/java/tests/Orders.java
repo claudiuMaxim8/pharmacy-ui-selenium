@@ -12,10 +12,14 @@ import pages.PatientListPage;
 import variables.Variables;
 
 public class Orders extends BaseTest {
-
+	
+	String admin = getCredentials().get("admin");
+	String practitioner = getCredentials().get("practitioner");
+	String CSR = getCredentials().get("CSR");
+	
 	@Test(enabled = true, priority = 1)
 	public void placeOrder() throws InterruptedException {
-		page.getInstance(LoginPage.class).login(Variables.practitioner, Variables.actualPass);
+		page.getInstance(LoginPage.class).login(practitioner.split(":")[0], practitioner.split(":")[1]);
 		page.getInstance(PatientListPage.class).startOrder();
 		page.getInstance(PatientListPage.IngredientsPage.class).addIngredients();
 		page.getInstance(PatientListPage.IngredientsPage.class).roundupIngredients("100");
@@ -26,7 +30,7 @@ public class Orders extends BaseTest {
 	
 	@Test(enabled = true, priority = 2)
 	public void shipOrder() throws InterruptedException {
-		page.getInstance(LoginPage.class).login(Variables.admin,Variables.actualPass);
+		page.getInstance(LoginPage.class).login(admin.split(":")[0], admin.split(":")[1]);
 		page.getInstance(AdminHomePage.class).enter_DispensaryPage();
 		page.getInstance(DispensaryPage.class).startOrder();
 		Thread.sleep(7000);
@@ -38,7 +42,7 @@ public class Orders extends BaseTest {
 
 	@Test(enabled = true, priority = 3)
 	public void assert_LateOrder() throws InterruptedException {
-		page.getInstance(LoginPage.class).login(Variables.practitioner, Variables.actualPass);
+		page.getInstance(LoginPage.class).login(practitioner.split(":")[0], practitioner.split(":")[1]);
 		page.getInstance(PatientListPage.class).startOrder();
 		page.getInstance(PatientListPage.IngredientsPage.class).addIngredients();
 		page.getInstance(PatientListPage.IngredientsPage.class).roundupIngredients("100");

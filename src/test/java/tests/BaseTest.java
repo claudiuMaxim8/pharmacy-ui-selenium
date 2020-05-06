@@ -39,6 +39,7 @@ public class BaseTest {
 	public ExtentReports extent;
 	public ExtentTest logger;
 
+	
 	@BeforeMethod
 	@Parameters(value = { "browser", "url" })
 	public void setUp(String browser, String url) {
@@ -46,14 +47,14 @@ public class BaseTest {
 		// Browser selection
 		if (browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
+			
 			// Setting Chrome options (download directory)
 			HashMap<String, Object> prefs = new HashMap<String, Object>();
 			prefs.put("download.default_directory", Variables.downloadFilepathChrome);
 			ChromeOptions options = new ChromeOptions();
 			options.setExperimentalOption("prefs", prefs);
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
-			//options.addArguments("enable-automation");
-			//options.addArguments("--headless");
+			
 
 			driver = new ChromeDriver(options);
 
@@ -95,6 +96,15 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 
+	}
+	
+	public static HashMap<String, String> getCredentials() {
+		HashMap <String, String> userMap = new HashMap <String, String>();
+		userMap.put("admin", "admin@mail.com:Up1234$#@!");
+		userMap.put("practitioner", "practitioner@mail.com:Up1234$#@!");
+		userMap.put("CSR", "CSR@mail.com:Up1234$#@!");
+		return userMap;
+								 
 	}
 
 	/*

@@ -25,12 +25,9 @@ public class LoginPage extends BasePage {
     private By newAccount = By.cssSelector("[tabindex='5']");
     
     
-    
-
-	    //Get functions
+    	//Get functions
 	    public WebElement getUsername() {
 	        return getElement(username);
-	
 	    }
 	
 	    public WebElement getPassword() {
@@ -60,7 +57,7 @@ public class LoginPage extends BasePage {
 	    public void getLoginPageHeader() {
 	        getPageHeader(header);
 	    }
-
+	    
 	    //Methods - page navigation functions
 	    public PractitionerHomePage login(String username, String password) {
 	    	try {

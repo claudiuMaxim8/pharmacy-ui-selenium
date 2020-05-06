@@ -30,11 +30,13 @@ public class TestsListener extends BaseTest implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		System.out.println("Test" + result.getMethod().getMethodName() + " skipped");
 		takeScreenshot(result.getMethod().getMethodName(), "skipped_");
+		
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 		// TODO Auto-generated method stub
+		
 
 	}
 

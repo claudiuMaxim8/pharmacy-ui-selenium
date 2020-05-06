@@ -1,6 +1,7 @@
 package pages;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.Random;
 
 import org.openqa.selenium.By;
@@ -38,7 +39,7 @@ public class BasePage extends Page {
 			element = driver.findElement(locator);
 			return element;
 		} catch (Exception e) {
-			System.out.println("An error occurred upon creating the element" + locator.toString());
+			System.out.println("An error occurred upon creating element" + locator.toString());
 			e.printStackTrace();
 		}
 		return element;
@@ -50,7 +51,7 @@ public class BasePage extends Page {
 		try {
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		} catch (Exception e) {
-			System.out.println("An error occurred upon waiting for the element" + locator.toString());
+			System.out.println("An error occurred upon waiting for element" + locator.toString());
 		}
 	}
 
@@ -60,17 +61,17 @@ public class BasePage extends Page {
 		try {
 			wait.until(ExpectedConditions.titleContains(title));
 		} catch (Exception e) {
-			System.out.println("An error occurred upon waiting for the title" + title.toString());
+			System.out.println("An error occurred upon waiting for title" + title.toString());
 		}
 	}
 
 	// Scroll to element
-	public void scrollElement(WebElement locator) {
+	public void scroll_to_Element(WebElement locator) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		try {
 			js.executeScript("arguments[0].scrollIntoView(true);", (WebElement) locator);
 		} catch (Exception e) {
-			System.out.println("An error occurred upon scrolling to the element" + locator.toString());
+			System.out.println("An error occurred upon scrolling to element" + locator.toString());
 		}
 	}
 
@@ -160,6 +161,15 @@ public class BasePage extends Page {
 		}
 		System.out.println("File does not exist");
 		return false;
+	}
+	
+	public static HashMap<String, String> getCredentials() {
+		HashMap <String, String> userMap = new HashMap <String, String>();
+		userMap.put("admin", "admin@mail.com:Up1234$#@!");
+		userMap.put("practitioner", "practitioner@mail.com:Up1234$#@!");
+		userMap.put("CSR", "CSR@mail.com:Up1234$#@!");
+		return userMap;
+								 
 	}
 
 }
