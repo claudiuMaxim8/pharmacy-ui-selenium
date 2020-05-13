@@ -55,8 +55,6 @@ public class BasePage extends Page {
 		}
 	}
 	
-	public void 
-
 	// Waiting for any desired Page Title
 	@Override
 	public void waitForPageTitle(String title) {
