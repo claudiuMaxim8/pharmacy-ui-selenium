@@ -3,7 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Smoke Test Suite]">
   <listeners>
     <listener class-name="ListenersPackage.TestsListener"/>
-    <listener class-name="ListenersPackage.TransformListener"/>
+    <listener class-name="ListenersPackage.AnalyzerTransformer"/>
     <listener class-name="utilities.ExtentReporterNG"/>
   </listeners>
   <test thread-count="5" name="Helioscript-SmokeTests(CHROME)(failed)">

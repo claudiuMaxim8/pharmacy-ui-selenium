@@ -54,6 +54,8 @@ public class BasePage extends Page {
 			System.out.println("An error occurred upon waiting for element" + locator.toString());
 		}
 	}
+	
+	public void 
 
 	// Waiting for any desired Page Title
 	@Override

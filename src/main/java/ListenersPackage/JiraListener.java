@@ -28,7 +28,7 @@ public class JiraListener implements ITestListener {
 		boolean ticketReady = jira.logTicketReady();
 		if(ticketReady) {
 			// Create Jira ticket
-			System.out.println();
+			System.out.println("");
 			JiraServiceProvider jiraServiceProvider = new JiraServiceProvider("https://unifiedp.atlassian.net", "username", "c61CVuz99RoIwzhhNQil6C40", "PHA"); 
 			String issueSummary = result.getMethod().getConstructorOrMethod().getMethod().getName() + "Failed due to assertions or exception";
 			String issueDescription = result.getThrowable().getMessage();

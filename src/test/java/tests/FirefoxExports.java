@@ -2,7 +2,6 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import ListenersPackage.Analyzer;
 import assertions.AssertiveFunctions;
 import pages.AdminHomePage;
 import pages.AdminReports;
@@ -18,7 +17,7 @@ public class FirefoxExports extends BaseTest {
 	String practitioner = getCredentials().get("practitioner");
 	String CSR = getCredentials().get("CSR");
 	
-	@Test(retryAnalyzer = ListenersPackage.Analyzer.class)
+	@Test(retryAnalyzer = ListenersPackage.Analyzer.class, enabled = true, priority = 1)
     public void practitionerOrderReport_Export() {
         page.getInstance(LoginPage.class).login(practitioner.split(":")[0], practitioner.split(":")[1]);
         page.getInstance(PractitionerHomePage.class).enter_OrderReportPage();

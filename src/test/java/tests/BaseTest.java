@@ -86,6 +86,7 @@ public class BaseTest {
 
 	}
 
+	
 	public void takeScreenshot(String methodName, String testStatus) {
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
