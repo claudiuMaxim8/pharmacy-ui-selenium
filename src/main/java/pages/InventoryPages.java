@@ -22,7 +22,7 @@ public class InventoryPages extends BasePage {
 	private By lotNrReport = By.linkText("Expired Lot Number Report");
 
 	// Get methods
-	public WebElement getInventory() {
+	public WebElement getInventoryDropdown() {
 		return getElement(inventoryDropdown);
 	}
 
@@ -41,29 +41,29 @@ public class InventoryPages extends BasePage {
 	public WebElement getLotNrReport() {
 		return getElement(lotNrReport);
 	}
-
+	
 	
 	// Methods
 	public ProductCatalog enter_ProductCatalog() {
-		getInventory().click();
+		getInventoryDropdown().click();
 		getProductCatalog().click();
 		return getInstance(ProductCatalog.class);
 	}
 
 	public ThresholdReport enter_ThresholdReport() {
-		getInventory().click();
+		getInventoryDropdown().click();
 		getThresholdReport().click();
 		return getInstance(ThresholdReport.class);
 	}
 
 	public MediumManagement enter_MediumManagement() {
-		getInventory().click();
+		getInventoryDropdown().click();
 		getMedium().click();
 		return getInstance(MediumManagement.class);
 	}
 
 	public ExpiredLotNumber enter_ExpiredLotNumber() {
-		getInventory().click();
+		getInventoryDropdown().click();
 		getLotNrReport().click();
 		return getInstance(ExpiredLotNumber.class);
 	}

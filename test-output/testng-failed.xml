@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Smoke Test Suite]">
-  <listeners>
-    <listener class-name="ListenersPackage.TestsListener"/>
-    <listener class-name="ListenersPackage.AnalyzerTransformer"/>
-    <listener class-name="utilities.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="Helioscript-SmokeTests(CHROME)(failed)">
-    <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="http://sunten.stage.helioscript.com"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.SmokeTests">
+      <class name="tests.Imports">
         <methods>
+          <include name="import_ChineseNames"/>
+          <include name="terms_and_conditions_upload"/>
+          <include name="upload_certificate"/>
+          <include name="patient_import"/>
           <include name="tearDown"/>
-          <include name="setCommission"/>
+          <include name="general_LogoUpload"/>
+          <include name="upload_logo"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.SmokeTests -->
+      </class> <!-- tests.Imports -->
     </classes>
-  </test> <!-- Helioscript-SmokeTests(CHROME)(failed) -->
-</suite> <!-- Failed suite [Smoke Test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

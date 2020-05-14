@@ -6,6 +6,8 @@ import java.lang.reflect.Method;
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
 
+import pages.InventoryPages;
+
 public class AnalyzerTransformer implements IAnnotationTransformer {
 
 	@Override
@@ -13,5 +15,5 @@ public class AnalyzerTransformer implements IAnnotationTransformer {
 		// TODO Auto-generated method stub
 		annotation.setRetryAnalyzer(Analyzer.class);
 	}
-
+	
 }
