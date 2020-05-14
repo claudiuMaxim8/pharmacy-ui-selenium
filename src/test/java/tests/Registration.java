@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 
+import BaseTest.BaseTest;
 import pages.AdminHomePage;
 import pages.AdminSettings;
 import pages.LoginPage;

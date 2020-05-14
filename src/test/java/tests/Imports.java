@@ -1,7 +1,7 @@
 package tests;
-
 import org.testng.annotations.Test;
 
+import BaseTest.BaseTest;
 import pages.AdminSettings;
 import pages.InventoryPages;
 import pages.LoginPage;

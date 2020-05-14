@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 
+import BaseTest.BaseTest;
 import databaseConnection.DatabaseConnection;
 import enums.operationTypeEnum;
 import pages.AdminHomePage;
@@ -10,7 +11,6 @@ import pages.HangfirePage;
 import pages.LoginPage;
 import pages.PatientListPage;
 import variables.Variables;
-
 public class Orders extends BaseTest {
 	
 	String admin = getCredentials().get("admin");

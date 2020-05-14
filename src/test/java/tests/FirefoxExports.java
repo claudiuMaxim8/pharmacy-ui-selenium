@@ -1,7 +1,7 @@
 package tests;
-
 import org.testng.annotations.Test;
 
+import BaseTest.BaseTest;
 import assertions.AssertiveFunctions;
 import pages.AdminHomePage;
 import pages.AdminReports;

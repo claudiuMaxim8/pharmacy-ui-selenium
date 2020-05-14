@@ -10,7 +10,7 @@ import pages.LoginPage;
 import pages.PractitionerHomePage;
 import pages.PractitionerReports;
 import variables.Variables;
-
+import BaseTest.BaseTest;
 public class OperaExports extends BaseTest {
 	
 	String admin = getCredentials().get("admin");

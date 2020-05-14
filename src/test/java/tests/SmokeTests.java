@@ -3,6 +3,7 @@ package tests;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import BaseTest.BaseTest;
 import databaseConnection.DatabaseConnection;
 import enums.operationTypeEnum;
 import pages.AdminHomePage;
@@ -14,7 +15,6 @@ import pages.LoginPage;
 import pages.PatientListPage;
 import pages.PractitionerHomePage;
 import variables.Variables;
-
 @Listeners(ListenersPackage.TestsListener.class)
 public class SmokeTests extends BaseTest {
 	
